@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -22,3 +23,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+=======
+# RogasKingdom
+Practice project to change minds and actions inside the company
+>>>>>>> 08d2d5b57a248dc50a7d494d96ce53b26b2aba17
