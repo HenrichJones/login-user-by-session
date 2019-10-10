@@ -8,4 +8,8 @@ module SessionsHelper
     @current_user ||= User.find_by(id: session[:user_id])
   end
 
+  def block_access
+    redirect_to users_path if curren_user.present?
+  end
+
 end
