@@ -12,4 +12,8 @@ module SessionsHelper
     redirect_to users_path if curren_user.present?
   end
 
+  def logged_in?
+    !current_user.nil?
+  end
+
 end
