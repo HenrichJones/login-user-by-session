@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :block_access, except: [:destroy]
 
   def new
     @user = User.new
@@ -8,7 +9,7 @@ class UsersController < ApplicationController
     @user = User.create(user_params)
     if @user.save
       redirect_to @user, notice: "Usuário criado com sucesso"
-      # sign_in @user
+      sign_in @user
     else
       render action: :new
     end

@@ -2,7 +2,6 @@ class SessionsController < ApplicationController
   before_action :block_access, except: [:destroy]
 
   def new
-    binding.pry
   end
 
   def create
