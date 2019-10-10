@@ -1,7 +1,7 @@
 module SessionsHelper
 
-  def sign_in
-    session[:user_id] = @user.id
+  def sign_in user
+    session[:user_id] = user.id
   end
 
   def current_user
@@ -9,7 +9,7 @@ module SessionsHelper
   end
 
   def block_access
-    redirect_to users_path if curren_user.present?
+    redirect_to users_path if current_user.present?
   end
 
   def logged_in?
