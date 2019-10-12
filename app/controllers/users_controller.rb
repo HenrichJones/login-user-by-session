@@ -22,6 +22,16 @@ class UsersController < ApplicationController
       render action: :new
     end
   end
+  
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = @user = User.find(params[:id])
+    return redirect_to users_path if @user.update_attributes(user_params)
+    render action: :edit
+  end
 
   private
 
