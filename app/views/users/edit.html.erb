@@ -1,2 +1,6 @@
 <h1><%= User Settings %></h1>
 <%= render 'form' %>
+<ul>
+  <li><%= link_to "Edit", edit_user_path(current_user) %></li>
+  <li><%= link_to "Delete", @user, method: :delete%></li>
+</ul>
